@@ -4,11 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import com.ichwan.react.rxkotlin.R
 import com.ichwan.react.rxkotlin.databinding.ActivityMainBinding
-import kotlinx.coroutines.flow.flowOn
 
 class FlowsActivity : AppCompatActivity() {
 
@@ -21,9 +17,9 @@ class FlowsActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel.countLiveData.observe(this, Observer { count ->
-            binding.txcount.text = "Counter: $count"
-        })
+        viewModel.countLiveData.observe(this) { count ->
+            binding.txcount.text = "Counter Normal Flow: $count"
+        }
 
     }
 }

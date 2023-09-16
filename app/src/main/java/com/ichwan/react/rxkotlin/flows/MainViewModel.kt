@@ -5,6 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 
@@ -25,8 +27,16 @@ class MainViewModel: ViewModel() {
         }
     }
 
+    private val _stateFlow = MutableStateFlow(0)
+    val stateFlow = _stateFlow.asStateFlow()
+
     init {
         collectFlow()
+        incrementCounter()
+    }
+
+    private fun incrementCounter() {
+        _stateFlow.value += 1
     }
 
     private fun collectFlow(){

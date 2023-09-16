@@ -16,7 +16,7 @@ Make sure your Android device has API level 24 or higher.
 To get started with the project, clone it using the following command:
 
 ```
-git clone "https://github.com/ichwansh03/example-app-architecture.git"
+git clone "https://github.com/ichwansh03/rx-flow-kotlin.git"
 ```
 
 ## Libraries Used
@@ -28,6 +28,12 @@ The following libraries are used in the project:
 * [ConstraintLayout](https://developer.android.com/training/constraint-layout) - Android's ConstraintLayout for creating flexible and responsive layouts.
 * [AndroidX Lifecycle](https://developer.android.com/jetpack/androidx/releases/lifecycle) - AndroidX Lifecycle components for handling lifecycle-aware data in the ViewModel.
 * [AndroidX Legacy Support](https://developer.android.com/jetpack/androidx/releases/legacy) - AndroidX Legacy Support library to support older Android features.
+* [Lifecycle](https://developer.android.com/jetpack/androidx/releases/lifecycle) - Lifecycle-aware components perform actions in response to a change in the lifecycle status of another component, such as activities and fragments.
+* [OkHttp](https://square.github.io/okhttp/) - OkHttp perseveres when the network is troublesome: it will silently recover from common connection problems.
+* [Retrofit](https://square.github.io/retrofit/) - Retrofit is the class through which your API interfaces are turned into callable objects.
+* [Coroutine](https://developer.android.com/kotlin/coroutines) - A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously.
+* [RxJava3](https://github.com/ReactiveX/RxJava) - RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based programs by using observable sequences.
+* [Glide](https://github.com/bumptech/glide) - Glide is a fast and efficient open source media management and image loading framework for Android that wraps media decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
 
 ## Project Architecture and Techniques
 
